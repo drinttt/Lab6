@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal(){
+            let numberInput1 = document.getElementById("number1");
+            let Num1 = parseInt(numberInput1.value);
+
+            let numberInput2 = document.getElementById("number2");
+            let Num2 = parseInt(numberInput2.value);
+
+            let opt = document.getElementById("OPTION");
+            let OPT = opt.value;
+
+            let sum = document.getElementById("SUM");
+
+            if(OPT=="+"){
+                sum.value=Num1+Num2;
+            }else if(OPT=="-"){
+                sum.value=Num1-Num2;
+            }else if(OPT=="*"){
+                sum.value=Num1*Num2;
+            }else if(OPT=="/"){
+                sum.value=Num1/Num2;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="number1">
+        <select id="OPTION">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="number2"> =
+        <input type="text" id="SUM">
+        <input type="button" value="Computer" onclick="cal()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function plus(){
+            let numberInput1 = document.getElementById("number1");
+            let Num1 = numberInput1.value;
+
+            let numberInput2 = document.getElementById("number2");
+            let Num2 = numberInput2.value;
+            
+            let sum = document.getElementById("SUM");
+            sum.value = parseInt(Num1)+parseInt(Num2);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="number1"> +
+        <input type="text" id="number2"> =
+        <input type="text" id="SUM">
+        <input type="button" value="Go Go" onclick="plus()">
+    </form>
+</body>
+</html>

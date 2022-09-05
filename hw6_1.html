@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function checkPassword() {
+            // เพิมการทํางานที่นี่
+            let Password1=document.getElementById("pass1");
+            let p1= Password1.value;
+            let Password2=document.getElementById("pass2");
+            let p2= Password2.value;
+            
+            let check =document.getElementById("errormsg");
+            if(p1!=p2){
+                check.innerHTML="Incorrect";
+                check.style.color="red";
+            }else{
+                check.innerHTML="Correct";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Register</h1>
+    Username: <input type="text"><br>
+    Password: <input type="text" id="pass1"><br>
+    Re-type Password: <input type="text" id="pass2"><br>
+    <input type="submit" onclick="checkPassword()">
+    <div id="errormsg"></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,tr{
+             border: 1px solid black;
+        }
+    </style>
+    <script>
+        function add(){
+            var nameInput = document.getElementById("nameTextInput");
+            var Name = nameInput.value;
+
+            var addressInput = document.getElementById("addressTextInput");
+            var Address = addressInput.value;
+
+            var telInput = document.getElementById("telTextInput");
+            var Tel = telInput.value;
+
+            let tr = document.createElement("tr");
+
+            var td1 = document.createElement("td");
+            td1.innerHTML = Name;
+
+            var td2 = document.createElement("td");
+            td2.innerHTML = Address;
+
+            var td3 = document.createElement("td");
+            td3.innerHTML = Tel;
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+
+            let t = document.getElementById("t")
+            t.appendChild(tr);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        ชื่อลูกค้า :<input type="text" id="nameTextInput"><br>
+        ที่อยู่ :<input type="text" id="addressTextInput"><br>
+        โทรศัพท์ :<input type="text" id="telTextInput"><br>
+        <input type="button" id="addButton" value="เพิ่ม" onclick="add()">
+    </form>
+    <table id="t">
+        <tr>
+            <td>ชื่อลูกค้า</td>
+            <td>ที่อยู่</td>
+            <td>โทรศัพท์</td>
+        </tr>
+        
+    </table>
+</body>
+</html>
